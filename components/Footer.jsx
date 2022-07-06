@@ -150,7 +150,7 @@ const Footer = () => {
 								focusable='false'
 								data-prefix='fas'
 								data-icon='home'
-								className='w-4 mr-4'
+								className='w-[1.2rem] mr-4'
 								role='img'
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 576 512'
