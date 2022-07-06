@@ -10,11 +10,11 @@ const catalogo = ({ dataC, allC }) => {
 			<Header title={dataC.nombre} subTitle={dataC.nombre} />
 			<motion.main
 				animate={{ opacity: [0, 1], y: [50, 0] }}
-				className='opacity-0 w-full flex flex-col justify-start items-center gap-8 md:flex-row md:items-start md:justify-center md:gap-0'
+				className='mt-8 opacity-0 w-full flex flex-col justify-start items-center gap-8 md:flex-row md:items-start md:justify-center md:gap-0'
 			>
 				<NavFilter cartegoriesToMake={allC} />
 				<section className='mb-8 px-8 flex flex-wrap w-full justify-center items-center gap-8'>
-					<CardOfProduct cardToMake={dataC.productos} node={false} />
+					<CardOfProduct cardToMake={dataC.productos} node={false} pagination={true} />
 				</section>
 			</motion.main>
 			<Footer />

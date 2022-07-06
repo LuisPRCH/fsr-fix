@@ -5,7 +5,7 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
 export const getAllProducts = async () => {
 	const query = gql`
 		query MyQuery {
-			productosConnection(first: 100) {
+			productosConnection(first: 100, orderBy: publishedAt_DESC) {
 				edges {
 					node {
 						codigo
@@ -41,7 +41,7 @@ export const getAllProducts = async () => {
 export const getLastProducts = async () => {
 	const query = gql`
 		query MyQuery {
-			productosConnection(last: 8, where: { destacado: true }) {
+			productosConnection(last: 8, where: { destacado: true }, orderBy: publishedAt_DESC) {
 				edges {
 					node {
 						id
@@ -74,7 +74,7 @@ export const getLastProducts = async () => {
 export const getAllCategories = async () => {
 	const query = gql`
 		query MyQuery {
-			categoriasConnection {
+			categoriasConnection(first: 100, orderBy: publishedAt_DESC) {
 				edges {
 					node {
 						id
