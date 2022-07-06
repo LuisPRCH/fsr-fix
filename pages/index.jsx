@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Html } from 'next/document'
 import {
 	Footer,
 	Header,
@@ -12,6 +13,7 @@ export default function Home({ dataP, dataC }) {
 	return (
 		<div className='font-Ubuntu'>
 			<Head>
+				<html lang='es' />
 				<title>Ferretería San Rafael - Todo para tu hogar</title>
 				<link rel='icon' href='/favicon.ico' />
 				<meta
