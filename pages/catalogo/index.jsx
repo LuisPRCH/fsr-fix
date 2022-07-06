@@ -1,10 +1,11 @@
-import { CardOfProduct, Footer, Header, Nav, NavFilter } from '../../components'
+import { CardOfProduct, Footer, Header, Nav, NavFilter, RedesWidget } from '../../components'
 import { getAllCategories, getAllProducts } from '../../services'
 import { motion } from 'framer-motion'
 
 const catalogo = ({ dataP, allC }) => {
 	return (
 		<>
+			<RedesWidget />
 			<Nav />
 			<Header title='Catálogo' subTitle='Catálogo' />
 			<motion.main

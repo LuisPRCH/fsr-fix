@@ -5,6 +5,7 @@ import {
 	LastCategories,
 	LastProducts,
 	Nav,
+	RedesWidget,
 } from '../components'
 import { getLastProducts, getLastCategories } from '../services'
 
@@ -22,6 +23,7 @@ export default function Home({ dataP, dataC }) {
 				/>
 				<link rel='canonical' href='https://fsr-sepia.vercel.app' />
 			</Head>
+			<RedesWidget />
 			<Nav />
 			<Header />
 			<main>

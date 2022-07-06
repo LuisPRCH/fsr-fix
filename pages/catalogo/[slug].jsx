@@ -4,15 +4,16 @@ import {
 	CardOfProduct,
 	Footer,
 	Nav,
+	RedesWidget,
 	Tags,
 	TitleOfSection,
 } from '../../components'
 import Image from 'next/image'
 
 const catalogo = ({ dataP, ramdon }) => {
-	console.log(ramdon)
 	return (
 		<>
+			<RedesWidget />
 			<header>
 				<Nav />
 			</header>
