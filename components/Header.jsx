@@ -7,10 +7,10 @@ const Header = ({
 	subSlogan = 'Todo para tu hogar',
 }) => {
 	return (
-		<header className="mt-[110px] relative flex justify-center items-center bg-[url('https://media.graphassets.com/T04RbgjzSsScg07fziCF')] bg-cover bg-left w-full h-[250px] md:mt-[90px] md:h-[400px] ">
+		<header className="relative flex justify-center items-center bg-[url('https://media.graphassets.com/T04RbgjzSsScg07fziCF')] bg-cover bg-left w-full h-[360px] md:h-[400px] ">
 			<motion.div
 				animate={{ opacity: [0, 1] }}
-				className='opacity-0 w-full h-full absolute top-0 left-0 bg-gradient-to-b from-[#00000099] to-[#00000099] flex justify-center items-center px-8'
+				className='opacity-0  w-full h-full absolute top-0 left-0 bg-gradient-to-b from-[#00000099] to-[#00000099] flex justify-center items-center px-8'
 			>
 				<motion.h1
 					animate={{ y: [-10, 0], opacity: [0, 1] }}

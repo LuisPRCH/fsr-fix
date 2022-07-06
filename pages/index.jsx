@@ -1,3 +1,4 @@
+import { useWindowScrollPositions } from '../hooks/useWindowScrollPositions'
 import Head from 'next/head'
 import {
 	Footer,
@@ -10,6 +11,7 @@ import {
 import { getLastProducts, getLastCategories } from '../services'
 
 export default function Home({ dataP, dataC }) {
+
 	return (
 		<div className='font-Ubuntu'>
 			<Head>
