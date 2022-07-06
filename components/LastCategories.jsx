@@ -1,0 +1,14 @@
+import { CardOfCategory, TitleOfSection } from '.'
+
+const LastCategories = ({ categoryData }) => {
+	return (
+		<section className='w-full min-h-[576px] p-8 flex flex-col justify-start items-center gap-8'>
+			<TitleOfSection title='Últimos Productos' />
+			<article className='flex flex-wrap w-full justify-center items-center gap-8'>
+				<CardOfCategory cardToMake={categoryData} />
+			</article>
+		</section>
+	)
+}
+
+export default LastCategories
