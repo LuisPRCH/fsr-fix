@@ -41,7 +41,7 @@ export const getAllProducts = async () => {
 export const getLastProducts = async () => {
 	const query = gql`
 		query MyQuery {
-			productosConnection(last: 8, where: {destacado: true}) {
+			productosConnection(last: 8, where: { destacado: true }) {
 				edges {
 					node {
 						id
@@ -71,39 +71,6 @@ export const getLastProducts = async () => {
 	return results.productosConnection.edges
 }
 
-export const getSingleProduct = async slug => {
-	const query = gql`query MyQuery {
-		productosConnection(where: {slug: "${slug}"}) {
-			edges {
-				node {
-					codigo
-					destacado
-					nombre
-					precio
-					publicado
-					id
-					categorias {
-						slug
-						nombre
-						id
-					}
-					descripcion {
-						html
-					}
-					imagen {
-						url
-						width
-						height
-					}
-				}
-			}
-		}
-	}`
-	const results = await request(graphqlAPI, query)
-
-	return results.productosConnection.edges
-}
-
 export const getAllCategories = async () => {
 	const query = gql`
 		query MyQuery {
@@ -113,6 +80,33 @@ export const getAllCategories = async () => {
 						id
 						nombre
 						slug
+						imagen {
+							url
+							height
+							width
+						}
+						productos {
+							codigo
+							destacado
+							nombre
+							precio
+							publicado
+							id
+							categorias {
+								slug
+								nombre
+								id
+							}
+							descripcion {
+								html
+							}
+							imagen {
+								url
+								width
+								height
+							}
+							slug
+						}
 					}
 				}
 			}
@@ -142,47 +136,6 @@ export const getLastCategories = async () => {
 			}
 		}
 	`
-	const results = await request(graphqlAPI, query)
-
-	return results.categoriasConnection.edges
-}
-
-export const getSingleCategory = async slug => {
-	const query = gql`query MyQuery {
-		categoriasConnection(where: {slug: "${slug}"}) {
-			edges {
-				node {
-					id
-					nombre
-					slug
-					imagen {
-						url
-						width
-						height
-					}
-					productos {
-						codigo
-						categorias {
-							nombre
-							slug
-							id
-						}
-						destacado
-						id
-						nombre
-						precio
-						publicado
-						slug
-						imagen {
-							url
-							width
-							height
-						}
-					}
-				}
-			}
-		}
-	}`
 	const results = await request(graphqlAPI, query)
 
 	return results.categoriasConnection.edges
