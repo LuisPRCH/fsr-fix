@@ -7,8 +7,8 @@ export default function RedesWidget() {
 			className='fixed top-1/4 left-0 w-[50px] cursor-pointer bg-[#0d4899] flex justify-center items-center flex-col gap-4 py-2 rounded-tr-xl rounded-br-xl z-[1000]'
 			title='WhatsApp'
 		>
-			<Link href={`#!`} passHref>
-				<motion.a whileHover={{ scale: 1.05 }}>
+			<Link href='https://wa.link/6zvclj' passHref>
+				<motion.a target='_blank' whileHover={{ scale: 1.05 }}>
 					<svg
 						className='w-8'
 						fill='white'
@@ -19,8 +19,8 @@ export default function RedesWidget() {
 					</svg>
 				</motion.a>
 			</Link>
-			<Link href={`#!`} passHref>
-				<motion.a whileHover={{ scale: 1.05 }}>
+			<Link href='https://es-la.facebook.com/FerreteriaSnRafael/' passHref>
+				<motion.a target='_blank' whileHover={{ scale: 1.05 }}>
 					<svg
 						className='w-8'
 						fill='white'
