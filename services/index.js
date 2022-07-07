@@ -44,7 +44,6 @@ export const getLastProducts = async () => {
 			productosConnection(
 				last: 8
 				where: { destacado: true }
-				orderBy: publishedAt_DESC
 			) {
 				edges {
 					node {
