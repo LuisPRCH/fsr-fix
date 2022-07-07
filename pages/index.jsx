@@ -1,4 +1,3 @@
-import { useWindowScrollPositions } from '../hooks/useWindowScrollPositions'
 import Head from 'next/head'
 import {
 	Footer,
@@ -6,14 +5,13 @@ import {
 	LastCategories,
 	LastProducts,
 	Nav,
-	RedesWidget,
+	RedesWidget
 } from '../components'
 import { getLastProducts, getLastCategories } from '../services'
 
 export default function Home({ dataP, dataC }) {
-
 	return (
-		<div className='font-Ubuntu'>
+		<div>
 			<Head>
 				<title>Ferretería San Rafael - Todo para tu hogar</title>
 				<link rel='icon' href='/favicon.ico' />
@@ -42,6 +40,6 @@ export async function getStaticProps() {
 	const dataC = (await getLastCategories()) || []
 
 	return {
-		props: { dataP, dataC },
+		props: { dataP, dataC }
 	}
 }

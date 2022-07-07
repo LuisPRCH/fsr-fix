@@ -1,6 +1,13 @@
 import { getAllCategories } from '../../services'
 import { motion } from 'framer-motion'
-import { CardOfProduct, Footer, Nav, NavFilter, Header, RedesWidget } from '../../components'
+import {
+	CardOfProduct,
+	Footer,
+	Nav,
+	NavFilter,
+	Header,
+	RedesWidget
+} from '../../components'
 
 const catalogo = ({ dataC, allC }) => {
 	return (
@@ -14,7 +21,11 @@ const catalogo = ({ dataC, allC }) => {
 			>
 				<NavFilter cartegoriesToMake={allC} />
 				<section className='mb-8 px-8 flex flex-wrap w-full justify-center items-center gap-8'>
-					<CardOfProduct cardToMake={dataC.productos} node={false} pagination={true} />
+					<CardOfProduct
+						cardToMake={dataC.productos}
+						node={false}
+						pagination={true}
+					/>
 				</section>
 			</motion.main>
 			<Footer />
@@ -27,8 +38,8 @@ export async function getStaticPaths() {
 	const paths = dataC.map(category => {
 		return {
 			params: {
-				slug: category.node.slug,
-			},
+				slug: category.node.slug
+			}
 		}
 	})
 	return { paths, fallback: false }
@@ -46,8 +57,8 @@ export async function getStaticProps({ params }) {
 	return {
 		props: {
 			dataC: categoryFill[0].node,
-			allC: nameSlug,
-		},
+			allC: nameSlug
+		}
 	}
 }
 

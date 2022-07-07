@@ -41,7 +41,11 @@ export const getAllProducts = async () => {
 export const getLastProducts = async () => {
 	const query = gql`
 		query MyQuery {
-			productosConnection(last: 8, where: { destacado: true }, orderBy: publishedAt_DESC) {
+			productosConnection(
+				last: 8
+				where: { destacado: true }
+				orderBy: publishedAt_DESC
+			) {
 				edges {
 					node {
 						id

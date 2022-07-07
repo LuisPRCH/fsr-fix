@@ -1,4 +1,11 @@
-import { CardOfProduct, Footer, Header, Nav, NavFilter, RedesWidget } from '../../components'
+import {
+	CardOfProduct,
+	Footer,
+	Header,
+	Nav,
+	NavFilter,
+	RedesWidget
+} from '../../components'
 import { getAllCategories, getAllProducts } from '../../services'
 import { motion } from 'framer-motion'
 
@@ -29,7 +36,7 @@ export async function getStaticProps() {
 		return { nombre: tag.node.nombre, slug: tag.node.slug, id: tag.node.id }
 	})
 	return {
-		props: { dataP, allC: nameSlug },
+		props: { dataP, allC: nameSlug }
 	}
 }
 

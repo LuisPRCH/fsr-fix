@@ -5,11 +5,11 @@ import { LogoSVG } from '.'
 import { useWindowScrollPositions } from '../hooks/useWindowScrollPositions'
 
 const Nav = () => {
-	const { scrollX, scrollY } = useWindowScrollPositions()
+	const { scrollY } = useWindowScrollPositions()
 	const [classNav, setClassNav] = useState('bg-transparent md:h-[70px]')
 	const [classLink, setClassLink] = useState('text-gray-100')
 	useEffect(() => {
-		if (scrollY >= 51) {
+		if (scrollY >= 300) {
 			setClassNav('bg-gray-100 md:h-[90px]')
 			setClassLink('text-gray-900')
 		} else {
@@ -30,7 +30,7 @@ const Nav = () => {
 					animate={{ y: [-10, 0], opacity: [0, 1] }}
 					className='opacity-0'
 				>
-					{scrollY >= 51 ? (
+					{scrollY >= 300 ? (
 						<LogoSVG color1='#233978' color2='#e63642' />
 					) : (
 						<LogoSVG />

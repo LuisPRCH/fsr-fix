@@ -6,7 +6,7 @@ import {
 	Nav,
 	RedesWidget,
 	Tags,
-	TitleOfSection,
+	TitleOfSection
 } from '../../components'
 import Image from 'next/image'
 
@@ -49,7 +49,7 @@ const catalogo = ({ dataP, ramdon }) => {
 						<section
 							className='p-8 w-full max-w-[700px] hidden border-t-[1px] border-gray-300 text-[#333] md:block'
 							dangerouslySetInnerHTML={{
-								__html: `${dataP.descripcion.html}`,
+								__html: `${dataP.descripcion.html}`
 							}}
 						/>
 					</div>
@@ -65,7 +65,7 @@ const catalogo = ({ dataP, ramdon }) => {
 					<section
 						className='p-4 w-full max-w-[700px] border-gray-300 bg-slate-100 rounded-lg text-[#333] md:hidden'
 						dangerouslySetInnerHTML={{
-							__html: `${dataP.descripcion.html}`,
+							__html: `${dataP.descripcion.html}`
 						}}
 					/>
 				</div>
@@ -86,8 +86,8 @@ export async function getStaticPaths() {
 	const paths = dataP.map(product => {
 		return {
 			params: {
-				slug: product.node.slug,
-			},
+				slug: product.node.slug
+			}
 		}
 	})
 
@@ -102,14 +102,14 @@ export async function getStaticProps({ params }) {
 	const ramdon = [
 		dataP[Math.floor(Math.random() * dataP.length)],
 		dataP[Math.floor(Math.random() * dataP.length)],
-		dataP[Math.floor(Math.random() * dataP.length)],
+		dataP[Math.floor(Math.random() * dataP.length)]
 	]
 
 	return {
 		props: {
 			dataP: productFill[0].node,
-			ramdon,
-		},
+			ramdon
+		}
 	}
 }
 
