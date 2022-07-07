@@ -89,7 +89,7 @@ export const getAllCategories = async () => {
 							height
 							width
 						}
-						productos {
+						productos(first: 100, orderBy: publishedAt_DESC) {
 							codigo
 							destacado
 							nombre

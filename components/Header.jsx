@@ -5,7 +5,8 @@ const Header = ({
 	title = 'Toda clase de necesidades para el hogar en un mismo lugar.',
 	slogan = 'Ferretería San Rafael. Todo para tu hogar',
 	subTitle = 'Ferretería San Rafael',
-	subSlogan = 'Todo para tu hogar'
+	subSlogan = 'Todo para tu hogar',
+	button = false
 }) => {
 	return (
 		<header className="relative flex justify-center items-center bg-[url('https://media.graphassets.com/T04RbgjzSsScg07fziCF')] bg-cover bg-left w-full h-[400px] md:h-[500px] ">
@@ -27,13 +28,18 @@ const Header = ({
 					{subTitle}
 					<span className='text-2xl font-normal'>{subSlogan}</span>
 				</motion.h1>
-				<button>
-					<Link href='/catalogo'>
-						<a className='bg-[#e83d42] px-8 py-3 font-medium text-xl rounded-lg text-gray-100'>
-							Ver Catálogo
-						</a>
-					</Link>
-				</button>
+				{button ? (
+					<motion.button
+						animate={{ y: [-10, 0], opacity: [0, 1] }}
+						className='opacity-0'
+					>
+						<Link href='/catalogo'>
+							<a className='bg-[#e83d42] px-8 py-3 font-medium text-xl rounded-lg text-gray-100'>
+								Ver Catálogo
+							</a>
+						</Link>
+					</motion.button>
+				) : null}
 			</motion.div>
 		</header>
 	)

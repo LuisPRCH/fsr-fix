@@ -15,7 +15,7 @@ const catalogo = ({ dataP, ramdon }) => {
 		<>
 			<RedesWidget />
 			<header>
-				<Nav />
+				<Nav scroll={false} />
 			</header>
 			<motion.main
 				animate={{ opacity: [0, 1], y: [50, 0] }}

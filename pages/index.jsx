@@ -25,7 +25,7 @@ export default function Home({ dataP, dataC }) {
 			</Head>
 			<RedesWidget />
 			<Nav />
-			<Header />
+			<Header button={true} />
 			<main>
 				<LastCategories categoryData={dataC} />
 				<LastProducts ProductsData={dataP} />
