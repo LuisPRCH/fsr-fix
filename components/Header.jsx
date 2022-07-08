@@ -6,7 +6,8 @@ const Header = ({
 	slogan = 'Ferretería San Rafael. Todo para tu hogar',
 	subTitle = 'Ferretería San Rafael',
 	subSlogan = 'Todo para tu hogar',
-	button = false
+	button = false,
+	size = 'text-4xl md:text-5xl'
 }) => {
 	return (
 		<header className="relative flex justify-center items-center bg-[url('https://media.graphassets.com/T04RbgjzSsScg07fziCF')] bg-cover bg-left w-full h-[400px] md:h-[500px] ">
@@ -16,14 +17,14 @@ const Header = ({
 			>
 				<motion.h1
 					animate={{ y: [-10, 0], opacity: [0, 1] }}
-					className='hidden opacity-0 text-gray-50 text-center flex-col gap-4 text-4xl font-medium md:flex md:text-5xl'
+					className={'hidden opacity-0 text-gray-50 text-center flex-col gap-4 font-medium md:flex ' + size}
 				>
 					{title}
 					<span className='text-2xl font-normal'>{slogan}</span>
 				</motion.h1>
 				<motion.h1
 					animate={{ y: [-10, 0], opacity: [0, 1] }}
-					className='flex opacity-0 text-gray-50 text-center flex-col gap-4 text-4xl font-medium md:hidden md:text-5xl'
+					className={'flex opacity-0 text-gray-50 text-center flex-col gap-4 font-medium md:hidden ' + size}
 				>
 					{subTitle}
 					<span className='text-2xl font-normal'>{subSlogan}</span>

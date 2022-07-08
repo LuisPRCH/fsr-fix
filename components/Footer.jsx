@@ -54,8 +54,8 @@ const Footer = () => {
 					</a>
 				</Link>
 			</section>
-			<section className='grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 py-4'>
-				<article className='flex flex-col gap-4 items-center lg:items-start'>
+			<section className='grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-24 py-4'>
+				<article className='flex flex-col gap-4 justify-start items-center lg:items-start'>
 					<h6 className='uppercase font-semibold flex justify-center'>
 						<svg
 							aria-hidden='true'
@@ -80,7 +80,7 @@ const Footer = () => {
 						necesidades para el hogar.
 					</p>
 				</article>
-				<article className='flex flex-col gap-4 lg:items-start'>
+				<article className='flex flex-col gap-4 justify-start items-center lg:items-start'>
 					<h6 className='uppercase font-semibold'>Servicios</h6>
 					<div className='flex flex-col gap-3'>
 						<p className='text-[#333]'>Herramientas Eléctricas</p>
@@ -89,7 +89,7 @@ const Footer = () => {
 						<p className='text-[#333]'>Agregados</p>
 					</div>
 				</article>
-				<article className='flex flex-col gap-4 lg:items-start'>
+				<article className='flex flex-col gap-4 justify-start items-center lg:items-start'>
 					<h6 className='uppercase font-semibold'>Links Utiles</h6>
 					<div className='flex flex-col gap-3'>
 						<Link href='/catalogo'>
@@ -103,7 +103,7 @@ const Footer = () => {
 						</Link>
 					</div>
 				</article>
-				<article className='flex flex-col gap-4 items-center lg:items-start'>
+				<article className='flex flex-col gap-4 justify-start items-center lg:items-start'>
 					<h6 className='uppercase font-semibold'>Contacto</h6>
 					<div className='flex flex-col gap-3'>
 						<Link href='https://goo.gl/maps/bKiFBN5uujv4FTVbA'>

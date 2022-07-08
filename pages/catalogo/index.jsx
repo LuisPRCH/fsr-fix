@@ -14,7 +14,7 @@ const catalogo = ({ dataP, allC }) => {
 		<>
 			<RedesWidget />
 			<Nav />
-			<Header title='Catálogo' subTitle='Catálogo' />
+			<Header title='Catálogo' subTitle='Catálogo' size='text-8xl' />
 			<motion.main
 				animate={{ opacity: [0, 1], y: [50, 0] }}
 				className='mt-8 opacity-0 w-full flex flex-col justify-start items-center gap-8 md:flex-row md:items-start md:justify-center md:gap-0'
