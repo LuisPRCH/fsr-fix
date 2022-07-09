@@ -53,11 +53,6 @@ const Nav = ({ scroll = true }) => {
 								<a className={classLink}>Catálogo</a>
 							</Link>
 						</li>
-						<li className='cursor-pointer'>
-							<Link href='/luis'>
-								<a className={classLink}>Luis</a>
-							</Link>
-						</li>
 					</motion.ul>
 				</nav>
 			) : (
