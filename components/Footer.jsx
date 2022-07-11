@@ -54,7 +54,7 @@ const Footer = () => {
 					</a>
 				</Link>
 			</section>
-			<section className='grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-24 py-4'>
+			<section className='grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8 py-4 md:px-24'>
 				<article className='flex flex-col gap-4 justify-start items-center lg:items-start'>
 					<h6 className='uppercase font-semibold flex justify-center'>
 						<svg
