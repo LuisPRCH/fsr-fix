@@ -9,11 +9,11 @@ const Nav = ({ scroll = true }) => {
 	const [classNav, setClassNav] = useState('bg-transparent md:h-[70px]')
 	const [classLink, setClassLink] = useState('text-gray-100')
 	useEffect(() => {
-		if (scrollY >= 300) {
-			setClassNav('bg-gray-100 md:h-[90px]')
+		if (scrollY >= 50) {
+			setClassNav('bg-gray-100 lg:h-[90px]')
 			setClassLink('text-gray-900')
 		} else {
-			setClassNav('bg-transparent md:h-[80px]')
+			setClassNav('bg-transparent lg:h-[80px]')
 			setClassLink('text-gray-100')
 		}
 	}, [scrollY])
@@ -23,7 +23,7 @@ const Nav = ({ scroll = true }) => {
 			{scroll ? (
 				<nav
 					className={
-						'flex-col flex gap-1 w-full h-[110px] justify-center items-center px-8 absolute top-0 left-0 md:flex-row md:justify-between md:fixed z-[1000] duration-200 ease-in-out ' +
+						'flex-col flex gap-1 w-full h-[110px] justify-center items-center px-8 absolute top-0 left-0 lg:flex-row lg:justify-between lg:fixed z-[1000] duration-200 ease-in-out lg:px-44 ' +
 						classNav
 					}
 				>
@@ -32,7 +32,7 @@ const Nav = ({ scroll = true }) => {
 							animate={{ y: [-10, 0], opacity: [0, 1] }}
 							className='opacity-0'
 						>
-							{scrollY >= 300 ? (
+							{scrollY >= 50 ? (
 								<LogoSVG color1='#233978' color2='#e63642' />
 							) : (
 								<LogoSVG />

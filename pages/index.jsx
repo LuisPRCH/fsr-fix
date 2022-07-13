@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import {
 	Footer,
-	Header,
+	HeaderHome,
 	LastCategories,
 	LastProducts,
 	Nav,
@@ -25,7 +25,7 @@ export default function Home({ dataP, dataC }) {
 			</Head>
 			<RedesWidget />
 			<Nav />
-			<Header button={true} />
+			<HeaderHome />
 			<main>
 				<LastCategories categoryData={dataC} />
 				<LastProducts ProductsData={dataP} />

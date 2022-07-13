@@ -34,7 +34,6 @@ export const getAllProducts = async () => {
 		}
 	`
 	const results = await request(graphqlAPI, query)
-
 	return results.productosConnection.edges
 }
 
@@ -70,7 +69,6 @@ export const getLastProducts = async () => {
 		}
 	`
 	const results = await request(graphqlAPI, query)
-
 	return results.productosConnection.edges
 }
 
@@ -116,7 +114,6 @@ export const getAllCategories = async () => {
 		}
 	`
 	const results = await request(graphqlAPI, query)
-
 	return results.categoriasConnection.edges
 }
 
@@ -140,6 +137,5 @@ export const getLastCategories = async () => {
 		}
 	`
 	const results = await request(graphqlAPI, query)
-
 	return results.categoriasConnection.edges
 }
